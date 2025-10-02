@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php)
+RewriteRule ^$ ?page=home [L]
+
+RewriteRule ^about$ index.php?page=about [L]
+RewriteRule ^berita$ index.php?page=berita [L]
+RewriteRule ^kegiatan$ index.php?page=kegiatan [L]
+RewriteRule ^kontak$ index.php?page=kontak [L]
+RewriteRule ^detail_berita-([0-9]+)$ index.php?page=detail_berita&id=$1 [L,QSA]
+RewriteRule ^detail_kegiatan-([0-9]+)$ index.php?page=detail_kegiatan&id=$1 [L,QSA]
+RewriteRule ^kontak$ ?page=kontak [L]
+
+Options All -Indexes
+
+
+
